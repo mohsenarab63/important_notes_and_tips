@@ -1,0 +1,31 @@
+
+npm install ziggy
+
+============================
+To simplify importing the route() function, you can create an alias to the vendor path:
+
+////// vite.config.js
+
+export default defineConfig({
+    resolve: {
+        alias: {
+            'ziggy-js': path.resolve('vendor/tightenco/ziggy'),
+        },
+    },
+});
+
+=========================================================
+
+Vue :
+Ziggy includes a Vue plugin to make it easy to use the route() helper throughout your Vue app:
+
+///// app.js:
+
+import { createApp } from 'vue';
+import { ZiggyVue } from 'ziggy-js';
+import App from './App.vue';
+
+createApp(App).use(ZiggyVue);
+
+=======================================
+
